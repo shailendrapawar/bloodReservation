@@ -28,7 +28,7 @@ async function registerBtn() {
   const data = { name, age, bloodGroup, number };
   try {
     startLoading();
-    const response = await fetch('http://localhost:3000/register', {
+    const response = await fetch(`${ENV.API_URL}/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -72,7 +72,7 @@ async function fetchDonars() {
     bloodGroup: searchKeyword
   }
 
-  const response = await fetch('http://localhost:3000/search', {
+  const response = await fetch(`${ENV.API_URL}/search`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -98,6 +98,7 @@ async function fetchDonars() {
 
   }
 
+  
 
 
 
