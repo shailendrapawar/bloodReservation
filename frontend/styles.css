@@ -77,6 +77,9 @@ button:active{
   transform: scale(0.9);
 }
 
+.error-body{
+  height: 20px;
+}
 .search-body{
   height: 350px;
     display: flex;
@@ -106,7 +109,6 @@ button:active{
 
 .searchItem{
   width: 200px;
-
   height: 110px;
   min-width: 200px;
   color: white;
@@ -120,7 +122,27 @@ button:active{
   justify-content: space-evenly;
   border-radius: 10px;
   font-family: cursive;
+
+  animation-name: itemLoader;
+  animation-duration: 0.8s;
+  animation-iteration-count: once;
 }
+
+@keyframes itemLoader {
+
+  0%{
+    translate: 0px -10px;
+    opacity: 0%;
+  }
+
+  100%{
+    translate: 0px 0px;
+    opacity: 100%;
+  }
+  
+}
+
+
 .search-result::-webkit-scrollbar{
   display: none;
 }
